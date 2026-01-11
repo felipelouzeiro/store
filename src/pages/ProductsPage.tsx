@@ -27,13 +27,13 @@ export function ProductsPage() {
   }
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-gray-50">
       <CategorySidebar
         categories={categories}
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
       />
-      <div className="flex-1 bg-white">
+      <div className="flex-1 bg-gray-50">
         <div className="p-6 lg:p-8">
           <ProductFilters
             categories={categories}
