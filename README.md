@@ -79,6 +79,26 @@ npm run dev
 
 A aplicação estará disponível em `http://localhost:5173`
 
+### Build para Produção
+
+```bash
+# Gerar build de produção
+npm run build
+
+# Preview do build de produção
+npm run preview
+```
+
+### Testes
+
+```bash
+# Executar testes
+npm run test
+
+# Executar testes com cobertura
+npm run test:coverage
+```
+
 ## ✨ Funcionalidades Implementadas
 
 ### ✅ Obrigatórias
@@ -99,6 +119,7 @@ A aplicação estará disponível em `http://localhost:5173`
 - ✅ Código limpo sem comentários desnecessários
 - ✅ Tratamento de erros consistente
 - ✅ Performance otimizada (lazy loading de imagens)
+- ✅ Testes unitários com Vitest e React Testing Library
 
 ## 🔄 Trade-offs
 
@@ -124,7 +145,6 @@ A aplicação estará disponível em `http://localhost:5173`
 
 ### Curto Prazo
 
-- [ ] Adicionar testes unitários (Jest + React Testing Library)
 - [ ] Implementar cache de requisições (React Query ou SWR)
 - [ ] Implementar skeleton loaders ao invés de spinner genérico
 - [ ] Adicionar tratamento de erro mais granular (404, 500, network error)
