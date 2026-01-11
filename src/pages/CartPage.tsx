@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useCart } from '../contexts/CartContext';
+import { formatPrice } from '../utils/formatPrice';
 
 export function CartPage() {
   const { isAuthenticated } = useAuth();
@@ -130,7 +131,7 @@ export function CartPage() {
                       </button>
                     </div>
                     <span className="text-xl font-bold text-gray-900">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      {formatPrice(item.product.price * item.quantity)}
                     </span>
                   </div>
                 </div>
@@ -144,12 +145,12 @@ export function CartPage() {
               <div className="space-y-3 mb-6 pb-6 border-b border-gray-200">
                 <div className="flex justify-between text-gray-700">
                   <span>Subtotal ({totalItems} {totalItems === 1 ? 'item' : 'itens'})</span>
-                  <span className="font-medium">${totalPrice.toFixed(2)}</span>
+                  <span className="font-medium">{formatPrice(totalPrice)}</span>
                 </div>
               </div>
               <div className="flex justify-between text-xl font-bold text-gray-900 mb-6">
                 <span>Total</span>
-                <span>${totalPrice.toFixed(2)}</span>
+                <span>{formatPrice(totalPrice)}</span>
               </div>
               <button className="w-full px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-smooth shadow-soft hover:shadow-medium">
                 Finalizar compra

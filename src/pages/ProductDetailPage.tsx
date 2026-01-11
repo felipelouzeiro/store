@@ -6,6 +6,7 @@ import { useCart } from '../contexts/CartContext';
 import { Loading } from '../components/ui/Loading';
 import { Error } from '../components/ui/Error';
 import { LoginModal } from '../components/ui/LoginModal';
+import { formatPrice } from '../utils/formatPrice';
 
 function generateMockRating() {
   return {
@@ -92,7 +93,7 @@ export function ProductDetailPage() {
                 <div className="flex items-center gap-6 pb-6 border-b border-gray-200">
                   <div>
                     <span className="text-4xl font-bold text-gray-900">
-                      ${product.price.toFixed(2)}
+                      {formatPrice(product.price)}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 bg-yellow-50 px-4 py-2 rounded-full border border-yellow-100">
