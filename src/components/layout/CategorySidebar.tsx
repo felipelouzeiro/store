@@ -21,19 +21,19 @@ export function CategorySidebar({
   onCategoryChange,
 }: CategorySidebarProps) {
   return (
-    <aside className="w-64 bg-gray-50 border-r border-gray-200 min-h-screen p-6">
-      <h2 className="text-lg font-bold text-gray-900 mb-6">Categorias</h2>
+    <aside className="w-64 bg-white border-r border-gray-200 min-h-screen p-5">
+      <h2 className="text-lg font-semibold text-gray-900 mb-6">Categorias</h2>
       <nav className="space-y-2">
         <button
           onClick={() => onCategoryChange(null)}
           className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-smooth ${
             !selectedCategory
-              ? 'bg-primary-600 text-white shadow-soft'
-              : 'text-gray-700 hover:bg-gray-100'
+              ? 'bg-primary-100 text-primary-600 font-medium'
+              : 'text-gray-600 hover:bg-gray-50 font-normal'
           }`}
         >
           <span className="text-xl">👤</span>
-          <span className="font-medium">Todos</span>
+          <span>Todos</span>
         </button>
         {categories.map((category) => (
           <button
@@ -41,12 +41,12 @@ export function CategorySidebar({
             onClick={() => onCategoryChange(category)}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-smooth capitalize ${
               selectedCategory === category
-                ? 'bg-primary-600 text-white shadow-soft'
-                : 'text-gray-700 hover:bg-gray-100'
+                ? 'bg-primary-100 text-primary-600 font-medium'
+                : 'text-gray-600 hover:bg-gray-50 font-normal'
             }`}
           >
             <span className="text-xl">{getCategoryIcon(category)}</span>
-            <span className="font-medium">{category}</span>
+            <span>{category}</span>
           </button>
         ))}
       </nav>

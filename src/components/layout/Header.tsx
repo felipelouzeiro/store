@@ -11,9 +11,9 @@ export function Header() {
 
   return (
     <>
-      <header className="bg-primary-600 text-white sticky top-0 z-50 shadow-medium">
-        <div className="max-w-full mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+      <header className="bg-primary-600 text-white sticky top-0 z-50 shadow-medium h-16">
+        <div className="max-w-full mx-auto px-6 lg:px-8 h-full">
+          <div className="flex items-center justify-between h-full">
             <Link to="/" className="flex items-center gap-2">
               <svg
                 className="w-8 h-8"
@@ -52,7 +52,7 @@ export function Header() {
                       />
                     </svg>
                     {totalItems > 0 && (
-                      <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                      <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                         {totalItems}
                       </span>
                     )}
@@ -71,7 +71,7 @@ export function Header() {
                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                       />
                     </svg>
-                    <span className="text-sm font-medium">ol {user?.username}!</span>
+                    <span className="text-sm font-normal">ol {user?.username}!</span>
                   </div>
                   <button
                     onClick={logout}

@@ -28,9 +28,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className="bg-white rounded-xl shadow-soft border border-gray-100 overflow-hidden hover:shadow-medium transition-smooth flex flex-col h-full group">
+      <div className="bg-white rounded-xl shadow-soft border border-gray-200 overflow-hidden hover:shadow-medium transition-smooth flex flex-col h-full group">
         <Link to={`/product/${product.id}`} className="flex flex-col h-full">
-          <div className="aspect-square bg-gray-50 flex items-center justify-center p-4 group-hover:bg-gray-100 transition-smooth">
+          <div className="aspect-[3/4] bg-gray-50 flex items-center justify-center p-4 group-hover:bg-gray-100 transition-smooth">
             <img
               src={product.image}
               alt={product.title}
@@ -38,24 +38,24 @@ export function ProductCard({ product }: ProductCardProps) {
               loading="lazy"
             />
           </div>
-          <div className="p-5 flex flex-col flex-grow">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2 flex-grow leading-snug">
+          <div className="p-4 flex flex-col flex-grow">
+            <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2 flex-grow leading-snug">
               {product.title}
             </h3>
-            <div className="mt-auto pt-3 border-t border-gray-100">
+            <div className="mt-auto pt-3 border-t border-gray-200">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-2xl font-bold text-gray-900">
+                <span className="text-xl font-semibold text-gray-900">
                   {formatPrice(product.price)}
                 </span>
               </div>
             </div>
           </div>
         </Link>
-        <div className="px-5 pb-5">
+        <div className="px-4 pb-4">
           <button
             onClick={handleAddToCart}
             disabled={isAdding}
-            className="w-full px-4 py-2.5 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full h-10 px-4 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-500 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {isAdding ? (
               <>
