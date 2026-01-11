@@ -9,10 +9,7 @@ export interface ProductListProps {
 }
 
 export interface ProductFiltersProps {
-  categories: string[];
-  selectedCategory: string | null;
   sortOption: SortOption;
-  onCategoryChange: (category: string | null) => void;
   onSortChange: (sort: SortOption) => void;
 }
 

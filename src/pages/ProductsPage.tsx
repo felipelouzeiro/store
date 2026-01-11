@@ -35,13 +35,7 @@ export function ProductsPage() {
       />
       <div className="flex-1 bg-gray-50">
         <div className="p-6 lg:p-8">
-          <ProductFilters
-            categories={categories}
-            selectedCategory={selectedCategory}
-            sortOption={sortOption}
-            onCategoryChange={setSelectedCategory}
-            onSortChange={setSortOption}
-          />
+          <ProductFilters sortOption={sortOption} onSortChange={setSortOption} />
           <ProductList products={filteredAndSortedProducts} />
         </div>
       </div>
